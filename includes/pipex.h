@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:27:30 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/07 01:15:41 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/07 16:31:12 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int		msg(char *err);
 
 char	*find_path(char **envp);
 
-void	first_child(t_pipex pipex, char *argv[], char *envp[]);
-void	second_child(t_pipex pipex, char *argv[], char *envp[]);
+void	fst_child_proc(t_pipex pipex, char *argv[], char *envp[]);
+void	sec_child_proc(t_pipex pipex, char *argv[], char *envp[]);
 
 void	parent_free(t_pipex *pipex);
 void	child_free(t_pipex *pipex);

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:33:47 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/07 01:13:23 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/07 16:32:16 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ int	main(int argc, char *argv[], char *envp[])
 	pipex.cmd_paths = ft_split(pipex.paths, ':');
 	pipex.pid1 = fork();
 	if (pipex.pid1 == 0)
-		first_child(pipex, argv, envp);
+		fst_child_proc(pipex, argv, envp);
 	pipex.pid2 = fork();
 	if (pipex.pid2 == 0)
-		second_child(pipex, argv, envp);
+		sec_child_proc(pipex, argv, envp);
 	close_pipes(&pipex);
 	waitpid(pipex.pid1, NULL, 0);
 	waitpid(pipex.pid2, NULL, 0);
